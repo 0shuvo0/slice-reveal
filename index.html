@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Slice Reveal is a simple library to easily add revealing effect to you HTML elements">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name=?robots? content=?index, follow?>
+	<meta name="author" content="MdShuvo">
+	<link rel="stylesheet" href="css/slice-reveal.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title></title>
+</head>
+<body>
+	<div class="banner slice-reveal horizontal" num-slice="10" slice-reveal-delay="0.1" slice-color="rgba(0, 0, 0, 1)">
+		<div class="contents">
+			<p class="title">Slice-Reveal</p>
+			<p class="nav">
+				<a href="#download-section">Get Started</a>
+				<a href="#usage-section">Usage</a>
+				<a href="#demo-section">Demo</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="container">
+		<section id="download-section" class="section">
+			<p class="title"><sup>1.</sup> Download the library</p>
+			<a href="dist/slice-reveal.zip" class="download-btn" download>scroll-reveal.zip</a>
+			
+			<p class="title"><sup>2.</sup> Including the CSS file</p>
+			<div class="code-block html-block slice-reveal">
+				&lt;link rel="stylesheet" href="css/slice-reveal.min.css"&gt;
+			</div>
+			
+			<p class="title"><sup>3.</sup> Including the JavaScript file</p>
+			<div class="code-block html-block slice-reveal reverse reverse-order">
+				&lt;script src="js/slice-reveal.min.js"&gt;&lt;/script&gt;
+			</div>
+			
+			<p class="title"><sup>4.</sup> Initialization</p>
+			<div class="code-block js-block slice-reveal horizontal alternate" slice-reveal-delay="0" reveal-duration="0.5">
+				initSliceReveal();<br>
+				/*or with options(Intersection Observer options)*/<br>
+				const ops = {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;rootMargin: "0px 0px -50px 0px"<br>
+				}<br>
+				initSliceReveal(ops);
+			</div>
+		</section><!-- /Download section -->
+			
+		<section id="usage-section" class="section">
+			<p class="title"><sup>1.</sup> Add <strong>slice-reveal</strong> class to desired elements</p>
+			<div class="code-block html-block slice-reveal horizontal reverse reverse-order">
+				&lt;div class="slice-reveal"&gt;Hello world&lt;/div&gt;
+			</div>
+			<p class="title"><sup>2.</sup> You can use any combination of available classes</p>
+			<p class="available-classes">
+				<span>reverse</span>, 
+				<span>horizontal</span>, 
+				<span>reverse-order</span>, 
+				<span>alternate</span>
+			</p>
+			<p class="title"><sup>3.</sup> Optionally you can add some attributes to modify behaviour</p>
+			<div class="code-block html-block slice-reveal alternate">
+				&lt;div class="slice-reveal reverse horizontal" num-slice="5" close-revealed="true"&gt;Hello world&lt;/div&gt;
+			</div>
+			<p class="title"><sup>4.</sup> Available attributes:</p>
+			<div class="available-ops">
+				<p>num-slice: <span>Define number of slices</span></p>
+				<p>reveal-delay: <span>Delay between each slice reveal</span></p>
+				<p>reveal-duration: <span>Define slice reveal animation duration</span></p>
+				<p>close-revealed: <span>Close slices once parent gets out of view</span></p>
+				<p>slice-color: <span>Define color of slices</span></p>
+			</div>
+		</section><!-- /Usage section -->
+		
+		<section class="section">
+			<p class="title"><sup>*</sup>Using the slim build</p>
+			<div class="code-block html-block slice-reveal horizontal">
+				&lt;script src="js/slice-reveal.slim.min.js"&gt;&lt;/script&gt;
+			</div>
+			<p class="title"><sup>*</sup>What is slim build</p>
+			<p>If your using Intersection Observer or some other scroll reveal library
+				then you don't need the extra codes that slice-reveal ships with in that case
+				you can the slim build it does not incdule intersection observer functionality.
+				So you have to <strong>add active class</strong> by yourself. And you'd
+				still have to call <strong>initSliceReveal()</strong> function.
+			</p>
+		</section><!-- /Slim build -->
+		
+		<section id="demo-section" class="section">
+			<p class="title">Demos</p>
+			<div class="demos">
+			<div class="demo slice-reveal">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal reverse">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal reverse"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal reverse-order">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal reverse-order"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal reverse reverse-order">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal reverse reverse-order"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal horizontal">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal horizontal"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal horizontal reverse reverse-order">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal horizontal reverse reverse-order"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal horizontal reverse">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal horizontal reverse"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal horizontal reverse-order">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal horizontal reverse-order"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal alternate">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal alternate"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal horizontal alternate">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal horizontal alternate"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal horizontal alternate last last-a" reveal-delay="0" reveal-duration="0.8">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal alternate horizontal" reveal-delay="0" reveal-duration="0.8"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			<div class="demo slice-reveal reverse last" reveal-duration="0.8" num-slice="1" slice-color="#000">
+				<div class="demo-block">
+					<div class="code-block html-block">
+						&lt;div class="slice-reveal reverse" reveal-duration="0.8" num-slice="1" slice-color="#000"&gt;Hello world&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+			</div>
+		</section><!-- /Demo section -->
+	</div>
+	
+	<footer class="footer">
+		<a href="index.html">Slice-Reveal</a>
+		<span>&copy; 2020</span>
+	</footer>
+	
+<script src="js/slice-reveal.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
